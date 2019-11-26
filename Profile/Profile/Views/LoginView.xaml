@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.LoginView" Title="MyProfile">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="profile.jpg" HeightRequest="60"/>
+            <StackLayout Margin="20">
+                <Entry Placeholder="User name" FontSize="09" Text="{Binding UserName}"/>
+                <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="Gray" FontSize="09" Text="{Binding Password}"/>
+            </StackLayout>
+            
+            <Button Text="Sign-In" BackgroundColor="#4286f4" TextColor="WhiteSmoke" CornerRadius="30" VerticalOptions="CenterAndExpand" 
+            Command="{Binding SignInCommand}" HeightRequest="30" FontSize="9" WidthRequest="120" HorizontalOptions="CenterAndExpand"/>
+            <Label  VerticalOptions="CenterAndExpand" FontSize="10" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Reset password" TextColor="#4286f4" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ResetPasswordCommand}"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label  VerticalOptions="CenterAndExpand" FontSize="10" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Not yet registered?"/>
+                        <Span Text="Sign up" TextColor="#4286f4" TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <!--<Button Text="Sign-Up" BackgroundColor="#4286f4" TextColor="WhiteSmoke" CornerRadius="30" VerticalOptions="CenterAndExpand" 
+            Command="{Binding SignUpCommand}" HeightRequest="30" FontSize="9" WidthRequest="80" HorizontalOptions="CenterAndExpand"/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

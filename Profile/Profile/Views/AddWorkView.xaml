@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.AddWorkView" Title="Add Work">
+    <ContentPage.Content>
+        <ScrollView Margin="20">
+            <StackLayout>
+                <Entry Text="{Binding CompanyName}" Placeholder="Employer name"/>
+                <Entry Text="{Binding Position}" Placeholder="Position"/>
+                <Entry Text="{Binding WorkDescription}" Placeholder="Work description"/>
+                <Entry Text="{Binding Achievements}" Placeholder="Achievements"/>
+                <Label Text="Start Date"/>
+                <DatePicker Date="{Binding FromDate}" TextColor="#4286f4"/>
+                <Label Text="End Date"/>
+                <DatePicker Date="{Binding ToDate}" MaximumDate="{Binding MaximumDate}" TextColor="#4286f4"/>
+                <Label Text="Current Job"/>
+                <Switch IsToggled="{Binding IsCurrentJob}" HorizontalOptions="Start" IsEnabled="False"/>
+                <!--<ActivityIndicator IsRunning="{Binding IsBusy}"/>-->
+                <StackLayout Margin="20,0,0,20">
+                    <Button Text="Save" BorderRadius="30" Command="{Binding SaveWorkCommand}" BackgroundColor="#4286f4" TextColor="WhiteSmoke"/>                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

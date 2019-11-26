@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.RegisterView" Title="Sign up">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Margin="20">
+                <StackLayout>
+                    <Picker x:Name="picker" SelectedItem="{Binding Title}" TextColor="black" Title="Title">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Mr</x:String>
+                                <x:String>Mrs</x:String>
+                                <x:String>Doctor</x:String>
+                                <x:String>Professor</x:String>
+                                <x:String>Miss</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Entry Text="{Binding Name}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Name"/>
+                    <Entry Text="{Binding Surname}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Surname"/>
+                    <Entry Text="{Binding IDNumber}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="ID number"/>
+                    <Entry Text="{Binding Telephone}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Telephone"/>
+                    <Entry Text="{Binding Email}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Email"/>
+                    <Entry Text="{Binding Address}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Address"/>
+                    <Picker SelectedItem="{Binding Gender}" TextColor="black" Title="Gender">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Entry Text="{Binding Nationality}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Nationality"/>
+                    <Label Text="Login Information" TextColor="#4286f4" HorizontalTextAlignment="Center" FontSize="11"/>
+                    <Entry Text="{Binding UserName}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Username"/>
+                    <Entry Text="{Binding Password}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Password" IsPassword="True" MaxLength="8"/>
+                    <Entry Text="{Binding ConfirmPassword}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Confirm password" IsPassword="True" MaxLength="8"/>
+                    <StackLayout Margin="20,0,0,20">
+                        <Button BorderRadius="30" Text="Sign up" BackgroundColor="#4286f4" TextColor="WhiteSmoke" Command="{Binding RegisterCommand}"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

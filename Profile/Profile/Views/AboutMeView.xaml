@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.AboutMeView"
+             xmlns:local="clr-namespace:Profile.ViewModel">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,0">
+            <Label Text="Click button below to create profile"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" IsVisible="{Binding IsProfileEmpty}"/>
+            <ListView ItemsSource="{Binding Profile}" HasUnevenRows="true" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" SelectionMode="Single">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="remove" IconImageSource="remove.png"/>
+                            </ViewCell.ContextActions>
+                                <ViewCell.View>
+                                    <StackLayout>
+                                        <Label TextColor="Black">Title</Label>
+                                        <Label Text="{Binding Title}"/>
+                                        <Label TextColor="Black">Name</Label>
+                                        <Label Text="{Binding Name}"/>
+                                        <Label TextColor="Black">Surname</Label>
+                                        <Label Text="{Binding Surname}"/>
+                                        <Label TextColor="Black">Gender</Label>
+                                        <Label Text="{Binding Gender}"/>
+                                        <Label TextColor="Black">ID Number</Label>
+                                        <Label Text="{Binding IDNumber}"/>
+                                        <Label TextColor="Black">Address</Label>
+                                        <Label Text="{Binding Address}"/>
+                                        <Label TextColor="Black">Email:</Label>
+                                        <Label Text="{Binding Email}"/>
+                                        <Label TextColor="Black">Telephone</Label>
+                                        <Label Text="{Binding Telephone}"/>
+                                        <Label TextColor="Black">Nationality</Label>
+                                        <Label Text="{Binding Nationality}"/>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <local:ItemSelectedBehavior>
+                    </local:ItemSelectedBehavior>
+                </ListView.Behaviors>
+            </ListView>
+            <StackLayout>
+                <!--<Button BorderRadius="30" Text="Add Profile" BackgroundColor="#4286f4" TextColor="WhiteSmoke" Command="{Binding AddProFileCommand}" IsVisible="{Binding IsAddButtonVisible}"/>
+                <Button BorderRadius="30"  Text="Edit Profile" BackgroundColor="#4286f4" TextColor="WhiteSmoke" Command="{Binding EditProFileCommand}" IsVisible="{Binding IsEditButtonVisible}"/>
+                <ImageButton Source="edit.png" Command="{Binding EditProFileCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke" IsVisible="{Binding IsEditButtonVisible}"/>-->
+                <ImageButton Source="add.png" Command="{Binding AddProFileCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke" IsVisible="{Binding AddButtonVisible}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

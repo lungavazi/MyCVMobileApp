@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.EditEducationView" Title="Edit Academic">
+    <ContentPage.Content>
+        <ScrollView Margin="20">
+            <StackLayout>
+                <Entry Text="{Binding QualilificationName}" Placeholder="Qualification Name"/>
+                <Entry Text="{Binding InstitutionName}" Placeholder="Institution Name"/>
+                <Entry Text="{Binding QualificationLevel}" Placeholder="Qualification Level"/>
+                <Label Text="Start Date" VerticalOptions="StartAndExpand"/>
+                <DatePicker Date="{Binding FromDate}" TextColor="#4286f4"/>
+                <Label Text="End Date"/>
+                <DatePicker Date="{Binding ToDate}" TextColor="#4286f4"/>
+                <!--<Button Text="Save"  Command="{Binding EditEducationCommand}" BorderRadius="30" BackgroundColor="#4286f4" TextColor="WhiteSmoke"/>-->
+                <ImageButton Source="save.png" Command="{Binding EditEducationCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke"/>
+                <!--<ActivityIndicator IsRunning="{Binding IsBusy}"/>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.EducationView"
+             xmlns:local="clr-namespace:Profile.ViewModel">
+    <StackLayout>
+        <Label Text="Click button below to Add education"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" IsVisible="{Binding IsEducationEmpty}"/>
+        <ListView Margin="10,10,10,0" ItemsSource="{Binding EducationList}" IsPullToRefreshEnabled="False" RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsBusy}" 
+                  RefreshControlColor="#42d7f4" HasUnevenRows="true" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Grid>
+                                <Label TextColor="Black" Text="{Binding QualilificationName}"/>
+                                <Label Text="{Binding InstitutionName}" Grid.Row="1"/>
+                                    <ImageButton Source="remove.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand">
+                                        <ImageButton.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding DeleteIconCommand}"/>
+                                        </ImageButton.GestureRecognizers>
+                                    </ImageButton>
+                                </Grid>
+                            </StackLayout>                            
+                        </ViewCell.View>                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Behaviors>
+                <local:ItemSelectedBehavior>                    
+                </local:ItemSelectedBehavior>
+            </ListView.Behaviors>
+        </ListView>
+        <StackLayout>
+            <!--<Button BorderRadius="30"  Command="{Binding AddEducationCommand}" Text="Add Academic" BackgroundColor="#4286f4" TextColor="WhiteSmoke"/>-->
+            <ImageButton Source="add.png" Command="{Binding AddEducationCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

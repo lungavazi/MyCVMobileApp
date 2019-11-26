@@ -1,0 +1,17 @@
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\UnitTestProject.deps.json
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\UnitTestProject.runtimeconfig.json
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\UnitTestProject.runtimeconfig.dev.json
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\UnitTestProject.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\UnitTestProject.pdb
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\Profile.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\bin\Debug\netcoreapp2.1\Profile.pdb
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.csprojAssemblyReference.cache
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.csproj.CoreCompileInputs.cache
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.AssemblyInfoInputs.cache
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.AssemblyInfo.cs
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.csproj.CopyComplete
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.dll
+C:\Users\Lunga.Vazi\Desktop\Apps\Profile\Profile\UnitTestProject\obj\Debug\netcoreapp2.1\UnitTestProject.pdb

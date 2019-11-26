@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.EditProfileView" Title="Edit Profile">
+    <ContentPage.Content>
+        <ScrollView Margin="20">
+            <StackLayout>
+                <Picker x:Name="picker" SelectedItem="{Binding Title}" TextColor="black" Title="Title">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Mr</x:String>
+                            <x:String>Mrs</x:String>
+                            <x:String>Doctor</x:String>
+                            <x:String>Professor</x:String>
+                            <x:String>Miss</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry Text="{Binding Name}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Name"/>
+                <Entry Text="{Binding Surname}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Surname"/>
+                <Entry Text="{Binding IDNumber}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="IDNumber"/>
+                <Entry Text="{Binding Telephone}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Telephone"/>
+                <Entry Text="{Binding Email}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Email"/>
+                <Entry Text="{Binding Address}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Address"/>
+                <Picker SelectedItem="{Binding Gender}" TextColor="black" Title="select gender">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Other</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry Text="{Binding Nationality}" HorizontalTextAlignment="Start" TextColor="black" Placeholder="Nationality"/>
+                <StackLayout Margin="20,0,0,20">
+                    <!--<Button BorderRadius="30" Text="Save" BackgroundColor="#4286f4" TextColor="WhiteSmoke" Command="{Binding SaveProfileCommand}"/>-->
+                    <ImageButton Source="save.png" Command="{Binding SaveProfileCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

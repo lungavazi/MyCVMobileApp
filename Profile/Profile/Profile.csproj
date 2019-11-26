@@ -1,0 +1,133 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AboutAppView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AboutMeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AddEducationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AddProfileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AddWorkView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DocumentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EditEducationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EditProfileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EditWorkHistoryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EducationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\RegisterView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ResetPasswordView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WorkHistoryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\AboutAppView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\AboutMeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\AddEducationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\AddProfileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\AddWorkView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\DocumentsPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\DocumentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditEducationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditProfileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EditWorkHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\EducationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\LoginView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\MasterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\RegisterView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\ResetPasswordView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\SettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Views\WorkHistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

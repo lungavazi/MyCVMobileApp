@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Profile.ViewModel"
+             x:Class="Profile.Views.WorkHistoryView">
+    <StackLayout>
+        <Label Text="Click button below to Add work"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" IsVisible="{Binding IsWorkEmpty}"/>
+        <ListView Margin="10,10,10,0" ItemsSource="{Binding WorkHistoryList}" HasUnevenRows="true" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Grid>
+                                    <Label TextColor="Black" Text="{Binding Position}"/>
+                                    <Label Text="{Binding CompanyName}" Grid.Row="1"/>
+                                    <ImageButton Source="remove.png" HorizontalOptions="EndAndExpand" HeightRequest="15" WidthRequest="15" Command="{Binding DeleteCommand}"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        <ListView.Behaviors>
+            <local:ItemSelectedBehavior>
+            </local:ItemSelectedBehavior>
+        </ListView.Behaviors>
+        </ListView>
+        <StackLayout>
+            <!--<Button BorderRadius="30" Command="{Binding AddWorkCommand}" Text="Add Work" BackgroundColor="#4286f4" TextColor="WhiteSmoke"/>-->
+            <ImageButton Source="add.png" Command="{Binding AddWorkCommand}" WidthRequest="30" HeightRequest="30" BackgroundColor="WhiteSmoke"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

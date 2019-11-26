@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Profile.Views.AddProfileView" Title="Add Profile">
+    <ContentPage.Content>
+        <ScrollView Margin="20">
+            <StackLayout>
+                <Picker x:Name="picker" SelectedItem="{Binding Title}"  Title="Title">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Mr</x:String>
+                            <x:String>Mrs</x:String>
+                            <x:String>Doctor</x:String>
+                            <x:String>Professor</x:String>
+                            <x:String>Miss</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry Text="{Binding Name}" Placeholder="Name"/>
+                <Entry Text="{Binding Surname}" Placeholder="Surname"/>
+                <Entry Text="{Binding IDNumber}" Placeholder="ID number"/>
+                <Entry Text="{Binding Telephone}" Placeholder="Telephone"/>
+                <Entry Text="{Binding Email}" Placeholder="email"/>
+                <Entry Text="{Binding Address}" Placeholder="Physical address"/>
+                <Picker SelectedItem="{Binding Gender}" Title="Gender">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Male</x:String>
+                            <x:String>Female</x:String>
+                            <x:String>Other</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry Text="{Binding Nationality}" Placeholder="Nationality"/>
+                <Image Source="{Binding Image}"/>
+                <StackLayout Margin="20,0,0,20">
+                    <Button BorderRadius="30" Text="Save" BackgroundColor="#4286f4" TextColor="WhiteSmoke" Command="{Binding SaveProfileCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
